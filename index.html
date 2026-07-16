@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Court of Thorns and Roses — Character Guide</title>
+<meta name="description" content="A starlit character guide to Sarah J. Maas's A Court of Thorns and Roses series — book by book, spoiler-safe.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #080b22;
+    --bg2: #0c1030;
+    --panel: #121741;
+    --panel2: #0b0f2a;
+    --edge: rgba(180,200,255,.14);
+    --star: #eef2ff;
+    --gold: #e3b877;
+    --gold-b: #f4d9a2;
+    --silver: #a9c4ff;
+    --violet: #9a86ea;
+    --ink: #e9edff;
+    --muted: #8b93bd;
+    --display: 'Cinzel', Georgia, serif;
+    --body: 'EB Garamond', Georgia, 'Times New Roman', serif;
+    --label: 'Cinzel', Georgia, serif;
+    font-size: 16px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { overflow-x: clip; }
+  body {
+    overflow-x: clip;
+    background:
+      radial-gradient(1100px 620px at 50% -12%, rgba(120,110,220,.28), transparent 60%),
+      radial-gradient(760px 520px at 88% 8%, rgba(227,184,119,.10), transparent 58%),
+      radial-gradient(820px 560px at 8% 70%, rgba(120,150,255,.10), transparent 60%),
+      radial-gradient(1.3px 1.3px at 24px 32px, rgba(238,242,255,.9), transparent),
+      radial-gradient(1px 1px at 92px 68px, rgba(238,242,255,.7), transparent),
+      radial-gradient(1.4px 1.4px at 152px 24px, rgba(244,217,162,.7), transparent),
+      radial-gradient(1px 1px at 196px 108px, rgba(238,242,255,.6), transparent),
+      radial-gradient(1px 1px at 56px 148px, rgba(238,242,255,.55), transparent),
+      radial-gradient(1.2px 1.2px at 128px 176px, rgba(244,217,162,.55), transparent),
+      linear-gradient(180deg, #0a0e2a 0%, var(--bg) 48%, #060818 100%);
+    background-size: auto, auto, auto, 220px 210px, 220px 210px, 220px 210px, 220px 210px, 220px 210px, 220px 210px, auto;
+    color: var(--ink);
+    font-family: var(--body);
+    min-height: 100vh;
+  }
+
+  /* ---------- Header ---------- */
+  header { text-align: center; padding: 4.6rem 1rem 2.3rem; }
+  .mark { margin-bottom: 1.5rem; }
+  .mark svg { width: 74px; height: 74px; filter: drop-shadow(0 0 14px rgba(227,184,119,.45)); }
+  header .eyebrow {
+    font-family: var(--label); font-weight: 400;
+    letter-spacing: .46em; text-indent: .46em; text-transform: uppercase;
+    font-size: .66rem; color: var(--gold); margin-bottom: 1.3rem;
+  }
+  header h1 {
+    font-family: var(--display); font-weight: 700;
+    font-size: clamp(1.9rem, 5.4vw, 3.7rem);
+    letter-spacing: .08em; text-transform: uppercase;
+    color: var(--gold-b);
+    text-shadow: 0 0 26px rgba(169,196,255,.4), 0 2px 40px rgba(227,184,119,.3);
+    line-height: 1.12;
+  }
+  header .subtitle {
+    font-family: var(--label); font-weight: 400;
+    font-size: .72rem; letter-spacing: .42em; text-indent: .42em; text-transform: uppercase;
+    color: var(--silver); margin-top: 1.2rem;
+  }
+  header p.sub { margin-top: 1.3rem; color: var(--muted); font-style: italic; font-size: 1.2rem; }
+  .ornament {
+    margin: 2rem auto 0; width: min(320px, 66%); height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    position: relative;
+  }
+  .ornament::after {
+    content: "✦"; position: absolute; left: 50%; top: -.72rem; transform: translateX(-50%);
+    color: var(--gold-b); font-size: .8rem; text-shadow: 0 0 10px rgba(244,217,162,.7);
+  }
+  .ornament .gem { display: none; }
+
+  /* ---------- Controls ---------- */
+  .controls {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(9,12,34,.95);
+    border-top: 1px solid var(--edge); border-bottom: 1px solid var(--edge);
+    box-shadow: 0 0 30px rgba(120,110,220,.12);
+    padding: .95rem 1rem .85rem;
+  }
+  .controls-inner {
+    max-width: 1140px; margin: 0 auto;
+    display: flex; flex-wrap: wrap; gap: .9rem 2.2rem;
+    align-items: center; justify-content: center;
+  }
+  .ctl { display: flex; align-items: center; gap: .65rem; }
+  .ctl label {
+    font-family: var(--label); font-size: .6rem; letter-spacing: .26em; text-transform: uppercase;
+    color: var(--gold); white-space: nowrap;
+  }
+  #search {
+    background: rgba(10,13,36,.8); border: 1px solid var(--edge); border-radius: 999px;
+    color: var(--ink); font-family: var(--body); font-size: 1.08rem;
+    padding: .45rem 1.1rem; width: min(290px, 64vw); outline: none;
+    transition: border-color .2s, box-shadow .2s;
+  }
+  #search:focus { border-color: var(--gold); box-shadow: 0 0 0 2px rgba(227,184,119,.18), 0 0 16px rgba(227,184,119,.2); }
+  #search::placeholder { color: #5f6690; font-style: italic; }
+  select#progress {
+    background: rgba(10,13,36,.8); border: 1px solid var(--edge); border-radius: 8px;
+    color: var(--ink); font-family: var(--body); font-size: 1.02rem;
+    padding: .42rem .6rem; outline: none; max-width: 62vw;
+  }
+  select#progress:focus { border-color: var(--gold); }
+  select#progress option { background: #0c1030; }
+
+  .toggle { display: inline-flex; align-items: center; gap: .6rem; cursor: pointer; user-select: none; }
+  .toggle input { display: none; }
+  .toggle .track {
+    width: 42px; height: 21px; border-radius: 999px;
+    background: rgba(180,200,255,.08); border: 1px solid var(--edge);
+    position: relative; transition: background .2s, box-shadow .2s; flex: none;
+  }
+  .toggle .track::after {
+    content: ""; position: absolute; top: 2px; left: 2px;
+    width: 15px; height: 15px; border-radius: 50%;
+    background: var(--muted); transition: transform .2s, background .2s;
+  }
+  .toggle input:checked + .track { background: rgba(227,184,119,.28); box-shadow: 0 0 12px rgba(227,184,119,.35); }
+  .toggle input:checked + .track::after { transform: translateX(21px); background: var(--gold-b); }
+  .toggle .tlabel { font-size: 1.04rem; color: var(--muted); font-style: italic; }
+
+  .note-bar { text-align: center; font-size: 1rem; color: var(--muted); padding: .7rem 1rem 0; font-style: italic; }
+
+  /* ---------- Book sections ---------- */
+  main { max-width: 1140px; margin: 0 auto; padding: 1.6rem 1.2rem 5rem; }
+  section.book { margin-top: 4rem; }
+  .book-head {
+    display: flex; align-items: baseline; gap: 1.2rem; flex-wrap: wrap;
+    border-bottom: 1px solid var(--edge); padding-bottom: 1rem;
+  }
+  .book-idx {
+    font-family: var(--body); font-style: italic; font-size: 2.2rem; color: var(--gold);
+    text-shadow: 0 0 16px rgba(227,184,119,.4); line-height: 1;
+  }
+  .book-head h2 {
+    font-family: var(--display); font-weight: 700;
+    font-size: clamp(1.35rem, 3.2vw, 2rem); letter-spacing: .06em; text-transform: uppercase;
+    color: var(--gold-b); flex: 1; line-height: 1.15;
+    text-shadow: 0 0 22px rgba(169,196,255,.28);
+  }
+  .book-head .year { font-family: var(--label); color: var(--muted); font-size: .64rem; letter-spacing: .24em; }
+  .book-blurb { color: var(--muted); font-size: 1.18rem; font-style: italic; margin: 1.1rem 0 2rem; max-width: 64ch; line-height: 1.5; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(186px, 1fr)); gap: 1.15rem; }
+
+  /* ---------- Cards ---------- */
+  .card {
+    position: relative;
+    background: linear-gradient(168deg, var(--panel), var(--panel2));
+    border: 1px solid var(--edge); border-radius: 14px;
+    padding: 2rem 1rem 1.5rem; text-align: center; cursor: pointer;
+    transition: transform .18s, border-color .25s, box-shadow .25s;
+  }
+  .card:hover {
+    transform: translateY(-4px); border-color: var(--gold);
+    box-shadow: 0 18px 44px rgba(0,0,0,.5), 0 0 26px rgba(169,196,255,.18);
+  }
+  .card .idx {
+    position: absolute; top: .82rem; right: 1rem;
+    font-family: var(--body); font-style: italic; font-size: 1rem; color: var(--gold); opacity: .82;
+  }
+  .pic-wrap { display: block; width: fit-content; margin: 0 auto 1.15rem; position: relative; }
+  .pic-wrap::before {
+    content: ""; position: absolute; inset: -7px; border-radius: 50%;
+    border: 1px solid rgba(227,184,119,.28); transition: border-color .25s, box-shadow .25s;
+  }
+  .card:hover .pic-wrap::before { border-color: var(--gold); box-shadow: 0 0 18px rgba(227,184,119,.35); }
+  .pic {
+    display: block; width: 128px; height: 128px; border-radius: 50%;
+    overflow: hidden; border: 1px solid rgba(169,196,255,.4); position: relative; background: #0a0d24;
+    box-shadow: 0 0 14px rgba(120,110,220,.2);
+  }
+  .pic svg { width: 100%; height: 100%; display: block; }
+  .pic img {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    object-fit: cover; filter: saturate(.98) contrast(1.03);
+    opacity: 0; transition: opacity .35s;
+  }
+  .pic img.custom { opacity: 1; }
+  .card h3 {
+    font-family: var(--display); font-weight: 400; font-size: .76rem;
+    letter-spacing: .16em; text-transform: uppercase; color: var(--ink);
+    line-height: 1.6; overflow-wrap: break-word;
+  }
+  .card h3 mark { background: rgba(227,184,119,.3); color: var(--gold-b); border-radius: 2px; padding: 0 2px; }
+  .card .role {
+    font-family: var(--body); font-size: 1.06rem; color: var(--silver); font-style: italic;
+    margin-top: .3rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+
+  /* ---------- Spoiler blur ---------- */
+  .spoiler { position: relative; cursor: pointer; }
+  body.shield-on .spoiler:not(.revealed) {
+    display: inline-block; color: transparent;
+    background: repeating-linear-gradient(45deg, #1a1d3e, #1a1d3e 6px, #15173330 6px, #161938 12px);
+    border-radius: 3px; user-select: none;
+  }
+  body.shield-on .spoiler:not(.revealed)::after {
+    content: "✦ spoiler — tap to reveal";
+    position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+    color: var(--silver); font-family: var(--body); font-style: italic; font-size: .84rem; letter-spacing: .04em;
+  }
+
+  /* ---------- Modal ---------- */
+  #overlay {
+    position: fixed; inset: 0; z-index: 100; background: rgba(4,5,16,.86);
+    display: none; align-items: flex-start; justify-content: center;
+    padding: 4vh 1rem; overflow-y: auto;
+  }
+  #overlay.open { display: flex; }
+  .modal {
+    background: linear-gradient(172deg, #141945, #0a0e28);
+    border: 1px solid var(--gold); border-radius: 16px;
+    max-width: 640px; width: 100%; padding: 2rem 1.9rem 2.1rem; position: relative;
+    box-shadow: 0 28px 74px rgba(0,0,0,.7), 0 0 44px rgba(120,110,220,.2);
+  }
+  .modal .close {
+    position: absolute; top: 1rem; right: 1.1rem; background: none; border: none;
+    color: var(--muted); font-size: 1.3rem; cursor: pointer; font-family: var(--body);
+  }
+  .modal .close:hover { color: var(--gold-b); }
+  .modal-head { display: flex; gap: 1.4rem; align-items: center; flex-wrap: wrap; }
+  .modal-head .pic-wrap { margin: 0; }
+  .modal-head .pic { width: 116px; height: 116px; }
+  .modal-head h2 {
+    font-family: var(--display); font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
+    color: var(--gold-b); font-size: 1.4rem; line-height: 1.2;
+    text-shadow: 0 0 20px rgba(169,196,255,.3);
+  }
+  .modal-head .aka { color: var(--muted); font-style: italic; font-size: 1.02rem; margin-top: .35rem; }
+  .modal-head .aff {
+    font-family: var(--label); color: var(--silver); font-size: .62rem;
+    letter-spacing: .2em; text-transform: uppercase; margin-top: .5rem;
+  }
+  .modal .desc { margin-top: 1.25rem; line-height: 1.58; color: var(--ink); font-size: 1.18rem; }
+  .modal h4 {
+    margin-top: 1.6rem; font-family: var(--label); font-weight: 400;
+    font-size: .62rem; letter-spacing: .28em; text-indent: .28em; text-transform: uppercase;
+    color: var(--gold); text-align: center;
+  }
+  .h4-divider {
+    margin: .6rem auto 1.05rem; width: 66%; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--edge), transparent);
+    font-size: 0; color: transparent;
+  }
+  .modal .app-row { margin-bottom: 1rem; padding-left: 1.5rem; position: relative; }
+  .modal .app-row::before { content: "✦"; position: absolute; left: 0; top: .1rem; color: var(--gold); font-size: .72rem; }
+  .modal .app-book {
+    font-family: var(--label); font-size: .68rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--gold-b);
+  }
+  .modal .app-note { font-size: 1.1rem; color: var(--muted); margin-top: .25rem; line-height: 1.5; }
+  .modal .hidden-note { margin-top: 1.1rem; color: var(--muted); font-size: .98rem; text-align: center; font-style: italic; }
+
+  .portrait-actions { display: flex; gap: .7rem; margin-top: 1.1rem; flex-wrap: wrap; }
+  .pbtn {
+    font-family: var(--label); font-weight: 400; font-size: .58rem;
+    letter-spacing: .2em; text-transform: uppercase; color: var(--gold-b);
+    background: transparent; border: 1px solid var(--edge); border-radius: 999px;
+    padding: .55rem 1.15rem; cursor: pointer; transition: border-color .2s, color .2s, box-shadow .2s;
+  }
+  .pbtn:hover { border-color: var(--gold); color: var(--ink); box-shadow: 0 0 14px rgba(227,184,119,.28); }
+
+  .empty-msg { text-align: center; color: var(--muted); padding: 3rem 1rem; display: none; font-size: 1.12rem; font-style: italic; }
+  footer {
+    text-align: center; color: #5a6088; font-size: 1rem; font-family: var(--body); font-style: italic;
+    padding: 2.6rem 1rem 3.4rem; line-height: 1.7;
+  }
+  footer em { color: var(--gold); font-style: normal; }
+
+  /* ---------- Parallax backdrop ---------- */
+  #parallax { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+  #parallax .plx { position: absolute; will-change: transform; }
+  #parallax svg { display: block; }
+  header, main, .empty-msg, footer { position: relative; z-index: 1; }
+  @media (prefers-reduced-motion: reduce) { #parallax .plx { transform: none !important; } }
+
+  @media (max-width: 430px) {
+    .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; }
+    .pic { width: 104px; height: 104px; }
+    .card { padding: 1.6rem .6rem 1.2rem; }
+  }
+</style>
+</head>
+<body class="shield-on">
+
+<div id="parallax" aria-hidden="true">
+  <!-- crescent moon + stars, upper right -->
+  <div class="plx" data-speed="0.08" style="top:-3vh; right:-8vmin;">
+    <svg viewBox="0 0 200 200" style="width:56vmin;height:56vmin;">
+      <path d="M138 30 A78 78 0 1 0 138 170 A60 60 0 1 1 138 30 Z" fill="none" stroke="#e3b877" stroke-width="1.3" opacity=".18"/>
+      <g fill="#f4d9a2" opacity=".5">
+        <circle cx="40" cy="46" r="1.6"/><circle cx="70" cy="30" r="1.2"/><circle cx="26" cy="96" r="1.4"/>
+        <circle cx="60" cy="120" r="1.1"/><circle cx="96" cy="60" r="1.3"/>
+      </g>
+    </svg>
+  </div>
+  <!-- constellation, left -->
+  <div class="plx" data-speed="0.2" style="top:50vh; left:-2vw;">
+    <svg viewBox="0 0 220 240" style="width:28vmin;height:auto;min-width:150px;">
+      <g stroke="#a9c4ff" stroke-width="1" fill="none" opacity=".16">
+        <path d="M30 30 L80 70 L70 130 L130 150 L110 210"/>
+      </g>
+      <g fill="#eef2ff" opacity=".5">
+        <circle cx="30" cy="30" r="2"/><circle cx="80" cy="70" r="1.6"/><circle cx="70" cy="130" r="2.2"/>
+        <circle cx="130" cy="150" r="1.6"/><circle cx="110" cy="210" r="1.8"/>
+      </g>
+    </svg>
+  </div>
+  <!-- scattered stars, right -->
+  <div class="plx" data-speed="0.14" style="top:100vh; right:3vw;">
+    <svg viewBox="0 0 160 220" style="width:22vmin;height:auto;min-width:110px;">
+      <g fill="#f4d9a2" opacity=".4">
+        <path d="M40 20 l2 4.4 4.4 2 -4.4 2 -2 4.4 -2 -4.4 -4.4 -2 4.4 -2 Z"/>
+        <circle cx="110" cy="46" r="1.6"/><circle cx="70" cy="90" r="1.3"/><circle cx="130" cy="120" r="1.5"/>
+        <circle cx="30" cy="140" r="1.2"/><circle cx="90" cy="180" r="1.6"/>
+      </g>
+      <path d="M20 60 L64 84" stroke="#eef2ff" stroke-width="1" opacity=".25"/>
+    </svg>
+  </div>
+  <!-- mountains + city-of-starlight glow, lower band -->
+  <div class="plx" data-speed="0.3" style="top:156vh; left:0; width:100%;">
+    <svg viewBox="0 0 1200 260" preserveAspectRatio="xMidYMax meet" style="width:100%;height:auto;">
+      <path fill="none" stroke="#8a86c8" stroke-width="1.2" opacity=".16" d="M0 260 L120 150 L200 200 L320 90 L430 190 L540 70 L660 200 L760 120 L900 210 L1010 110 L1120 200 L1200 150 L1200 260 Z"/>
+      <g fill="#e3b877" opacity=".35">
+        <circle cx="300" cy="230" r="1.4"/><circle cx="360" cy="238" r="1.2"/><circle cx="520" cy="226" r="1.5"/>
+        <circle cx="580" cy="236" r="1.2"/><circle cx="700" cy="232" r="1.3"/><circle cx="880" cy="238" r="1.2"/>
+        <circle cx="940" cy="228" r="1.4"/><circle cx="1040" cy="236" r="1.2"/>
+      </g>
+    </svg>
+  </div>
+</div>
+
+<header>
+  <div class="mark">
+    <svg viewBox="0 0 90 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M62 14 A26 26 0 1 0 62 66 A20 20 0 1 1 62 14 Z" fill="none" stroke="#e3b877" stroke-width="1.4" opacity=".85"/>
+      <g stroke="#a9c4ff" stroke-width="1" opacity=".6">
+        <path d="M14 24 L24 40 L18 58"/>
+      </g>
+      <g fill="#f4d9a2">
+        <path d="M24 40 l1.6 3.4 3.4 1.6 -3.4 1.6 -1.6 3.4 -1.6 -3.4 -3.4 -1.6 3.4 -1.6 Z"/>
+        <circle cx="14" cy="24" r="1.6"/><circle cx="18" cy="58" r="1.4"/>
+        <circle cx="40" cy="16" r="1.2" opacity=".8"/><circle cx="8" cy="44" r="1.1" opacity=".7"/>
+      </g>
+    </svg>
+  </div>
+  <div class="eyebrow">A Court of Characters</div>
+  <h1>A Court of Thorns &amp; Roses</h1>
+  <div class="subtitle">The Character Guide</div>
+  <p class="sub">Every major player in Sarah J. Maas's world of Prythian — book by book, spoiler-safe.</p>
+  <div class="ornament"><span class="gem"></span></div>
+</header>
+
+<div class="controls">
+  <div class="controls-inner">
+    <div class="ctl">
+      <label for="search">Search</label>
+      <input id="search" type="search" placeholder="Name, alias, court, power…">
+    </div>
+    <div class="ctl">
+      <label for="progress">Book</label>
+      <select id="progress"></select>
+    </div>
+    <label class="toggle ctl">
+      <input type="checkbox" id="shield" checked>
+      <span class="track"></span>
+      <span class="tlabel">Blur twists &amp; deaths</span>
+    </label>
+  </div>
+  <div class="note-bar">Showing one book at a time. Names, titles, and notes stay spoiler-safe for the selected book — some characters aren't who they first appear to be…</div>
+</div>
+
+<main id="main"></main>
+<div class="empty-msg" id="empty">No characters match your search in this book.</div>
+
+<footer>
+  Within each book, characters are ordered by how much of the story they appear in.<br>
+  Click any character, then <em>Upload portrait</em>, to use your own art — it's saved in this browser.<br>
+  (You can also place files in an <em>images/</em> folder beside this page, e.g. <em>images/feyre.jpg</em>.)<br>
+  A fan-made guide — A Court of Thorns and Roses © Sarah J. Maas / Bloomsbury.
+</footer>
+
+<div id="overlay">
+  <div class="modal" role="dialog" aria-modal="true">
+    <button class="close" aria-label="Close">✕</button>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
+<script>
+/* =========================================================
+   DATA
+   ========================================================= */
+const BOOKS = [
+  { id:'acotar', num:'#1', title:'A Court of Thorns and Roses', year:2015,
+    blurb:"A human huntress kills the wrong wolf and is dragged across the wall into Prythian, where a masked High Lord, a dying land, and a blight older than memory will remake her into something far more than mortal." },
+  { id:'acomaf', num:'#2', title:'A Court of Mist and Fury', year:2016,
+    blurb:"Shattered by what she did Under the Mountain, Feyre is claimed by a bargain she can't escape — and finds, in a city of starlight she was never meant to see, a court, a purpose, and a love she never imagined." },
+  { id:'acowar', num:'#3', title:'A Court of Wings and Ruin', year:2017,
+    blurb:"War comes to Prythian. Feyre plays a deadly game in a hostile court while the High Lords are forced toward an impossible alliance against a king who would unmake the world." },
+  { id:'acofas', num:'#3.5', title:'A Court of Frost and Starlight', year:2018,
+    blurb:"In the fragile quiet after the war, the Night Court rebuilds and celebrates the Solstice — while old wounds, unspoken grief, and new threads of fate quietly gather in the dark." },
+  { id:'acosf', num:'#4', title:'A Court of Silver Flames', year:2021,
+    blurb:"Nesta Archeron, furious and unravelling, is sent to the House of Wind to train with an Illyrian warrior — and must decide whether to keep tearing herself apart, or forge something unbreakable instead." },
+];
+const IDX = Object.fromEntries(BOOKS.map((b,i)=>[b.id,i]));
+
+/* Character records. Portraits fall back to a starlit monogram; upload your own per character. */
+const CHARACTERS = [
+  {
+    id:'feyre',
+    name:'Feyre Archeron',
+    role:'Human Huntress', roleReveal:{ from:'acomaf', role:'High Lady of the Night Court' },
+    aff:'Night Court',
+    desc:'A mortal huntress who kept her starving family alive through the cruelest winters — sharp-eyed, stubborn, and haunted by everything she has had to do to survive. A single kill in the woods drags her across the wall and into a world of High Fae.',
+    descSpoiler:{ from:'acomaf', text:'Remade Fae by the seven High Lords, Feyre becomes the first High Lady of the Night Court in history — and the mate of its High Lord, with a splinter of every court’s magic in her veins.'},
+    books:{
+      acotar:{ p:96, n:'Taken to the Spring Court as payment for a Fae life she took, Feyre falls for its masked High Lord — and walks into the mountain to break a curse that has enslaved all of Prythian.', s:'She solves Amarantha’s riddle, dies for it, and is reborn as High Fae by the gift of all seven High Lords.' },
+      acomaf:{ p:94, n:'Wedding day panic, a broken mind, and an old bargain pull Feyre out of the Spring Court and into the Night Court — and a life she never knew she wanted.', s:'She discovers Velaris, joins the Court of Dreams, learns Rhysand is her mate, and claims her place as High Lady.' },
+      acowar:{ p:90, n:'Feyre returns to the Spring Court as a spy, sowing ruin from within, as the High Lords are dragged toward a war none can win alone.', s:'She unmasks Tamlin’s alliance with Hybern, helps forge the alliance of courts, and loses — and saves — more than she thought possible.' },
+      acofas:{ p:70, n:'High Lady of a healing court, Feyre rebuilds Velaris and reaches for a moment of peace amid the grief.' },
+      acosf:{ p:40, n:'Feyre holds the court together as her sister comes apart — carrying secrets, and a pregnancy, with dangerous stakes.', s:'Her near-fatal labor becomes the crisis that finally forges Nesta into who she was meant to be.' },
+    }
+  },
+  {
+    id:'rhysand',
+    name:'Rhysand',
+    aliases:[{t:'High Lord of the Night Court'},{t:'Rhys'}],
+    role:'High Lord of the Night Court', aff:'Night Court',
+    desc:'The most powerful High Lord in Prythian’s history — darkly beautiful, winged, and dangerous, with a reputation for cruelty and a court no outsider has ever seen. Under the Mountain, he plays a monster’s part flawlessly.',
+    descSpoiler:{ from:'acomaf', text:'The cruelty is a mask: Rhysand has spent five centuries protecting the hidden city of Velaris and the Court of Dreams, sacrificing his own name to keep the people he loves safe. And he is Feyre’s mate.'},
+    books:{
+      acotar:{ p:24, n:'The Night Court’s High Lord appears Under the Mountain as Amarantha’s cruel favorite — and strikes a bargain with Feyre that saves her life and binds her to him.' },
+      acomaf:{ p:78, n:'Rhys collects on his bargain and slowly reveals the truth of who he is, and the court, and the city, he would burn worlds to protect.', s:'He reveals Velaris, the mating bond, and finally lets Feyre see the male beneath five hundred years of masks.' },
+      acowar:{ p:64, n:'High Lord and High Lady lead the fight to unite Prythian against Hybern, at terrible personal cost.', s:'He gives his life to remake the Cauldron’s magic — and is brought back by the High Lords Feyre calls on.' },
+      acofas:{ p:40, n:'Rebuilding his city and his court, Rhys reckons quietly with the war’s cost.' },
+      acosf:{ p:26, n:'A High Lord and expectant father, Rhys keeps a devastating secret about the pregnancy from Feyre.' },
+    }
+  },
+  {
+    id:'tamlin',
+    name:'Tamlin',
+    aliases:[{t:'High Lord of the Spring Court'}],
+    role:'High Lord of the Spring Court', aff:'Spring Court',
+    desc:'The golden, masked High Lord of the Spring Court — a shapeshifting warrior with a beast’s strength and a soldier’s grief, ruling a land slowly being eaten alive by a blight he cannot name.',
+    descSpoiler:{ from:'acomaf', text:'His love curdles into control: after Under the Mountain, Tamlin’s need to protect Feyre becomes a cage — and his desperation drives him into an alliance that betrays all of Prythian.'},
+    books:{
+      acotar:{ p:60, n:'The High Lord who takes Feyre as payment — and, against every expectation, becomes her first love as the curse tightens around them both.' },
+      acomaf:{ p:30, n:'Freed from the mountain, Tamlin’s fear hardens into something suffocating.', s:'He bargains with the King of Hybern to get Feyre back, opening the door to war.' },
+      acowar:{ p:20, n:'Exposed and increasingly isolated, Tamlin must choose which side of the war he truly stands on.', s:'In the end he helps restore Rhysand — a last, bitter act of decency — and is left to his ruin.' },
+      acosf:{ p:5, n:'A broken High Lord haunting the wreck of the Spring Court.' },
+    }
+  },
+  {
+    id:'lucien',
+    name:'Lucien Vanserra',
+    aliases:[{t:'Emissary of the Spring Court'}],
+    role:'Fae Emissary', aff:'Spring Court → Band of Exiles',
+    desc:'Russet-haired and metal-eyed, exiled son of the Autumn Court and Tamlin’s wry, loyal emissary — quick with a barb and slow to trust, carrying old scars from a family that never wanted him.',
+    descSpoiler:{ from:'acowar', text:'Lucien is revealed to be Elain Archeron’s mate — and, in a deeper secret, not truly Beron’s son at all, but the child of the Day Court’s High Lord, Helion.'},
+    books:{
+      acotar:{ p:34, n:'Tamlin’s emissary and closest friend, whose sharp tongue hides a deep loyalty as Feyre navigates the Spring Court.' },
+      acomaf:{ p:20, n:'Torn between his High Lord and his conscience as the Spring Court darkens.' },
+      acowar:{ p:24, n:'Lucien defects toward the light, discovering a mate — and a father — he never expected.', s:'His bond to Elain and his true Day Court parentage reshape his place in the world.' },
+      acofas:{ p:12, n:'Adrift between courts, Lucien serves as an emissary to the human lands and the Band of Exiles.' },
+      acosf:{ p:10, n:'He circles the mate who won’t have him, and the war brewing on the continent.' },
+    }
+  },
+  {
+    id:'nesta',
+    name:'Nesta Archeron',
+    role:'Eldest Archeron Sister', roleReveal:{ from:'acowar', role:'Made Fae Warrior' },
+    aff:'Night Court',
+    desc:'The eldest Archeron sister — cold, proud, and razor-tongued, with a spine of iron and a heart walled off behind it. She feels everything too much, and would die before she let anyone see it.',
+    descSpoiler:{ from:'acowar', text:'Forced into the Cauldron by Hybern, Nesta emerges High Fae — and takes something vast from the Cauldron itself, a death-touched power that terrifies even her.'},
+    books:{
+      acotar:{ p:8, n:'The sharp-edged eldest sister Feyre leaves behind in the human world.' },
+      acomaf:{ p:12, n:'Still human, still furious, Nesta refuses to be moved by the Fae who circle her family.' },
+      acowar:{ p:22, n:'Dragged into the war, Nesta is changed forever by the enemy’s cruelest weapon.', s:'Made Fae against her will, she steals a shard of the Cauldron’s power and turns it against the King of Hybern.' },
+      acofas:{ p:24, n:'Spiralling in grief and self-destruction, Nesta pushes away everyone who tries to reach her.' },
+      acosf:{ p:96, n:'Sent to train in the House of Wind, Nesta must fight her way out of her own ruin — with a blade, a sisterhood, and a warrior who won’t give up on her.', s:'She forges the Valkyries, reclaims her power on her own terms, and accepts the mating bond with Cassian.' },
+    }
+  },
+  {
+    id:'elain',
+    name:'Elain Archeron',
+    role:'Middle Archeron Sister', roleReveal:{ from:'acowar', role:'Made Fae Seer' },
+    aff:'Night Court',
+    desc:'The gentle middle Archeron sister — a gardener with a soft heart and softer manners, easy to underestimate and easy to love, who only ever wanted a quiet life and a garden of her own.',
+    descSpoiler:{ from:'acowar', text:'Thrown into the Cauldron alongside Nesta, Elain emerges High Fae and a Seer — cursed with visions of what is and what will be, and bound by a mating bond she never asked for.'},
+    books:{
+      acomaf:{ p:8, n:'The kind, engaged-to-be-married middle sister, still human and still hopeful.' },
+      acowar:{ p:18, n:'Elain is remade by the Cauldron and left shattered — then finds a thread of terrible purpose in her new sight.', s:'Her visions help win the war, and she is revealed as Lucien’s mate even as her heart drifts elsewhere.' },
+      acofas:{ p:12, n:'Quietly rebuilding herself in the Night Court, tending new gardens and unspoken feelings.' },
+      acosf:{ p:26, n:'Elain steps carefully back into the world, her gift and her heart pulling her toward dangerous, unclaimed ground.' },
+    }
+  },
+  {
+    id:'cassian',
+    name:'Cassian',
+    aliases:[{t:'Commander of the Night Court Armies'}],
+    role:'Illyrian Warrior', aff:'Night Court',
+    desc:'A powerful Illyrian warrior with tattered wings he wears like a badge and a grin that hides five centuries of battle — Rhysand’s brother in all but blood, and General of the Night Court’s armies.',
+    books:{
+      acomaf:{ p:34, n:'The brash, big-hearted Illyrian commander who takes Feyre — and, warily, her sisters — under his wing.' },
+      acowar:{ p:40, n:'Cassian leads the Night Court’s armies into a war for the survival of Prythian.', s:'His pull toward Nesta becomes undeniable even as the battlefield tries to take everything from them.' },
+      acofas:{ p:20, n:'Rebuilding the Illyrian legions and circling the female who keeps pushing him away.' },
+      acosf:{ p:80, n:'Tasked with training Nesta, Cassian goes to war with her walls — and refuses to stop fighting for her.', s:'He accepts the mating bond with Nesta, and together they become something neither could be alone.' },
+    }
+  },
+  {
+    id:'azriel',
+    name:'Azriel',
+    aliases:[{t:'The Shadowsinger'},{t:'Spymaster of the Night Court'}],
+    role:'Shadowsinger & Spymaster', aff:'Night Court',
+    desc:'The Night Court’s spymaster — a quiet, shadow-wreathed Illyrian whose scarred hands and cursed blade, Truth-Teller, have ended more enemies than any army. He keeps his own counsel, and his own heart, locked tight.',
+    books:{
+      acomaf:{ p:24, n:'The silent, lethal shadowsinger of the Court of Dreams, gathering the secrets that keep Velaris safe.' },
+      acowar:{ p:26, n:'Azriel’s spycraft — and his shadows — prove decisive as the war closes in.', s:'His quiet devotion to Mor, and the wounds beneath it, come sharply into focus.' },
+      acofas:{ p:16, n:'A rare, charged Solstice moment hints at feelings Azriel has buried for years.' },
+      acosf:{ p:22, n:'The shadowsinger walks a dangerous line where duty and a forbidden longing meet.' },
+    }
+  },
+  {
+    id:'mor',
+    name:'Morrigan',
+    aliases:[{t:'Mor'},{t:'Third of the Court of Dreams'}],
+    role:'Lady of the Court of Dreams', aff:'Night Court',
+    desc:'Rhysand’s cousin and one of the most powerful females in Prythian — golden, warm, and fierce, with a gift for truth and a past in the Autumn Court she has spent centuries outrunning.',
+    descSpoiler:{ from:'acowar', text:'Behind the laughter, Mor carries the scars of a brutal Autumn Court betrothal — and a truth about her own heart she has hidden from the people she loves most for five hundred years.'},
+    books:{
+      acomaf:{ p:26, n:'The dazzling, loyal heart of the Court of Dreams, and Feyre’s first true friend in the Night Court.' },
+      acowar:{ p:22, n:'Mor’s history with the Autumn Court — and with Eris — is dragged into the war’s politics.', s:'She finally begins to face the truth she has hidden about herself for centuries.' },
+      acofas:{ p:12, n:'Navigating old wounds and the family she has chosen.' },
+      acosf:{ p:10, n:'Mor moves between courts as an envoy while the Night Court’s fractures quietly test her.' },
+    }
+  },
+  {
+    id:'amren',
+    name:'Amren',
+    aliases:[{t:'Second of the Night Court'}],
+    role:'The High Lord’s Second', aff:'Night Court',
+    desc:'Rhysand’s Second — a small, silver-eyed being of terrifying power and ancient appetite, who wears a High Fae body like an ill-fitting coat and remembers a world older than Prythian itself.',
+    descSpoiler:{ from:'acowar', text:'Amren is not Fae at all, but a being from another realm, bound into flesh long ago. To save everyone, she surrenders her true, monstrous form — and becomes, at last, truly High Fae.'},
+    books:{
+      acomaf:{ p:20, n:'The court’s fearsome, blood-drinking Second, who alone can decipher the ancient magic they need.' },
+      acowar:{ p:22, n:'Amren’s ancient knowledge — and her willingness to pay any price — becomes the war’s hinge.', s:'She gives up her true form to mend the Cauldron and turn the tide, choosing this world over her own.' },
+      acofas:{ p:10, n:'Adjusting, prickishly, to a smaller and more mortal kind of power.' },
+      acosf:{ p:10, n:'Her sharp counsel — and sharper tongue — cut through the court’s troubles.' },
+    }
+  },
+  {
+    id:'amarantha',
+    name:'Amarantha',
+    role:'High Queen Under the Mountain', aff:'Hybern',
+    desc:'The beautiful, merciless general of Hybern who conquered Prythian and dragged its seven High Lords Under the Mountain — collecting cruelties, and hearts, like jewels for half a century.',
+    books:{
+      acotar:{ p:22, n:'The tyrant who has enslaved all of Prythian, and who forces Feyre into a deadly game of riddles and trials for the fate of everyone she loves.', s:'Feyre kills her Under the Mountain, breaking the curse — but Amarantha’s master, the King of Hybern, remains.' },
+    }
+  },
+  {
+    id:'hybern',
+    name:'The King of Hybern',
+    role:'King of Hybern', aff:'Hybern',
+    desc:'The ancient, coldly brilliant king of the island realm of Hybern — the true power behind Amarantha, who has spent centuries plotting to shatter the wall and drag the human world back into chains.',
+    books:{
+      acomaf:{ p:12, n:'The war’s true architect reveals his hand, wielding the Cauldron and every alliance he can buy or break.', s:'He captures the Archeron sisters and forces two of them into the Cauldron.' },
+      acowar:{ p:16, n:'The king marches on Prythian with the Cauldron and an army of monsters.', s:'He is defeated in the final battle, but not before exacting a devastating toll.' },
+    }
+  },
+  {
+    id:'ianthe',
+    name:'Ianthe',
+    role:'High Priestess', aff:'Spring Court → Hybern',
+    desc:'A beautiful, ambitious High Priestess who wraps herself in piety and sunlight — and beneath it, a hunger for power that will step on anyone in reach.',
+    books:{
+      acomaf:{ p:12, n:'The priestess who insinuates herself into the Spring Court and Feyre’s wedding, all false warmth and grasping ambition.', s:'She betrays the Archeron family to Hybern.' },
+      acowar:{ p:8, n:'Her treachery fully unmasked, Ianthe reaps what she sowed.' },
+    }
+  },
+  {
+    id:'tarquin',
+    name:'Tarquin',
+    aliases:[{t:'High Lord of the Summer Court'}],
+    role:'High Lord of the Summer Court', aff:'Summer Court',
+    desc:'The young, newly crowned High Lord of the Summer Court — idealistic, generous, and hungry to build a fairer Prythian, if the old grudges of the courts will let him.',
+    books:{
+      acomaf:{ p:12, n:'A hopeful new High Lord who welcomes Feyre and Rhys to his gleaming city — before a theft turns friend to foe.', s:'Feyre steals a sacred object from him to save the world, earning a dangerous enemy.' },
+      acowar:{ p:14, n:'Tarquin must decide whether old betrayals or the greater war will define his court.' },
+    }
+  },
+  {
+    id:'helion',
+    name:'Helion',
+    aliases:[{t:'High Lord of the Day Court'}],
+    role:'High Lord of the Day Court', aff:'Day Court',
+    desc:'The charismatic High Lord of the Day Court — master of a thousand libraries and the magic of light, wearing his easy sensuality like armor over a keen and calculating mind.',
+    descSpoiler:{ from:'acowar', text:'Helion is Lucien’s true father — the result of a long-ago love with Lucien’s mother, hidden to protect them both from Beron’s wrath.'},
+    books:{
+      acowar:{ p:14, n:'The brilliant Day Court High Lord joins the alliance, and a decades-old secret about his past surfaces.', s:'He learns he has a son — Lucien — and the truth reshapes the courts’ tangled loyalties.' },
+    }
+  },
+  {
+    id:'kallias',
+    name:'Kallias',
+    aliases:[{t:'High Lord of the Winter Court'}],
+    role:'High Lord of the Winter Court', aff:'Winter Court',
+    desc:'The quiet, ice-pale High Lord of the Winter Court, who lost much to Amarantha and guards what remains — especially the female he has loved since they were children.',
+    books:{
+      acowar:{ p:10, n:'The grieving Winter Court High Lord is coaxed toward the alliance, his old love rekindled amid the war.' },
+    }
+  },
+  {
+    id:'viviane',
+    name:'Viviane',
+    role:'Lady of the Winter Court', aff:'Winter Court',
+    desc:'Kallias’s fierce, warm-hearted mate — a female who held the Winter Court together through its darkest years and refuses to let grief have the last word.',
+    books:{
+      acowar:{ p:8, n:'Viviane’s courage and loyalty help bind the Winter Court to the alliance.' },
+    }
+  },
+  {
+    id:'thesan',
+    name:'Thesan',
+    aliases:[{t:'High Lord of the Dawn Court'}],
+    role:'High Lord of the Dawn Court', aff:'Dawn Court',
+    desc:'The gentle, healer-minded High Lord of the Dawn Court, whose peregryn warriors and gifted physicians make his quiet court far more formidable than it appears.',
+    books:{
+      acowar:{ p:8, n:'The Dawn Court’s healers and warriors prove vital as the alliance prepares for war.' },
+    }
+  },
+  {
+    id:'beron',
+    name:'Beron',
+    aliases:[{t:'High Lord of the Autumn Court'}],
+    role:'High Lord of the Autumn Court', aff:'Autumn Court',
+    desc:'The cruel, self-serving High Lord of the Autumn Court — a domestic tyrant who rules his sons and his court through fear, and would sell any alliance for his own advantage.',
+    books:{
+      acowar:{ p:8, n:'The scheming Autumn Court High Lord is the alliance’s most treacherous, self-interested member.' },
+      acosf:{ p:5, n:'Beron’s ambitions on the continent make him a looming danger.' },
+    }
+  },
+  {
+    id:'eris',
+    name:'Eris Vanserra',
+    aliases:[{t:'Heir to the Autumn Court'}],
+    role:'Heir of the Autumn Court', aff:'Autumn Court',
+    desc:'Beron’s eldest son and heir — cold, cunning, and impossible to read, universally distrusted and playing a longer game than anyone gives him credit for.',
+    descSpoiler:{ from:'acowar', text:'For all his icy cruelty, Eris is a secret ally to the Night Court — and his tangled history with Mor is far more complicated than the ugly story everyone believes.'},
+    books:{
+      acowar:{ p:12, n:'The Autumn heir strikes a wary bargain with the Night Court, his true motives hidden behind a sneer.', s:'He proves a covert ally against his own father — while the truth of his past with Mor stays fraught.' },
+      acosf:{ p:8, n:'Eris maneuvers through court politics with an agenda no one fully trusts.' },
+    }
+  },
+  {
+    id:'jurian',
+    name:'Jurian',
+    role:'Ancient Human Commander', aff:'Band of Exiles',
+    desc:'A legendary human commander of the first great war against the Fae — long dead, and then not, his soul dragged back into the world by Amarantha for her own cruel purposes.',
+    books:{
+      acomaf:{ p:8, n:'Resurrected and seemingly serving Hybern, the ancient warlord’s true loyalties are a mystery.' },
+      acowar:{ p:14, n:'Jurian plays a dangerous double game against Hybern from the inside.', s:'He turns on Hybern at the decisive moment, fighting for the world he once died to protect.' },
+      acofas:{ p:8, n:'Now allied with Feyre’s court, Jurian works to stabilize the human lands with Vassa.' },
+      acosf:{ p:6, n:'Maneuvering against the threats gathering on the continent.' },
+    }
+  },
+  {
+    id:'vassa',
+    name:'Vassa',
+    role:'Cursed Human Queen', aff:'Band of Exiles',
+    desc:'A fierce mortal queen cursed to live as a firebird by day and a woman by night, bound to a deathless sorcerer’s lake — burning to free her people, and herself.',
+    books:{
+      acowar:{ p:8, n:'The enslaved queen joins the fight against Hybern, chafing against the curse that binds her.' },
+      acofas:{ p:8, n:'Vassa works with the Band of Exiles to protect the mortal lands.', s:'Her curse — and the sorcerer Koschei who holds it — becomes a growing threat.' },
+      acosf:{ p:6, n:'The firebird queen’s bargain with Koschei looms over the coming conflict.' },
+    }
+  },
+  {
+    id:'suriel',
+    name:'The Suriel',
+    role:'Ancient Truth-Teller', aff:'Prythian',
+    desc:'A gaunt, hooded creature of the deep woods that will answer any question truthfully — if you can trap it — cloaked in tattered robes and older than the courts themselves.',
+    books:{
+      acotar:{ p:8, n:'The eerie creature Feyre snares for answers, whose cryptic truths set her on her path.' },
+      acomaf:{ p:8, n:'A recurring, unsettling source of the truths no one else will speak.' },
+      acowar:{ p:6, n:'The Suriel’s final gift of truth comes at a devastating cost.', s:'It is killed by Hybern’s forces while protecting Feyre — "Stay with the ones who love you."' },
+    }
+  },
+  {
+    id:'bonecarver',
+    name:'The Bone Carver',
+    role:'Death-God of the Prison', aff:'The Prison',
+    desc:'An ancient death-creature imprisoned beneath a lonely island, who takes the shape of whatever a visitor most fears or loves, and trades prophecy for the bones of the slain.',
+    books:{
+      acomaf:{ p:8, n:'The shape-shifting oracle of the Prison, who barters riddles and warnings with Feyre.' },
+      acowar:{ p:8, n:'Freed to fight in the war, the Bone Carver takes the field against Hybern.', s:'The ancient being falls in the final battle, spending his long death on the world’s survival.' },
+    }
+  },
+  {
+    id:'weaver',
+    name:'The Weaver',
+    aliases:[{t:'Stryga'}],
+    role:'Ancient Predator of the Wood', aff:'The Middle',
+    desc:'A blindfolded, ageless horror who sits weaving in a cottage at the heart of the Wood, sensing all who enter by scent and sound — and devouring those foolish enough to be caught.',
+    books:{
+      acomaf:{ p:6, n:'The deadly ancient creature Feyre must rob in a heart-stopping test of nerve.', s:'Feyre steals a ring from her hoard and barely escapes with her life.' },
+    }
+  },
+  {
+    id:'gwyn',
+    name:'Gwyn Berdara',
+    role:'Priestess of the Night Court', aff:'Night Court',
+    desc:'A half-Fae priestess hidden in the Night Court’s library — a survivor with a luminous voice and a fierce, quiet courage, rediscovering her strength one blade-stroke at a time.',
+    books:{
+      acosf:{ p:24, n:'A trauma survivor sheltering in the library, Gwyn becomes one of Nesta’s first true friends — and a founding Valkyrie.', s:'She reclaims her power through training and song, helping forge the reborn Valkyries.' },
+    }
+  },
+  {
+    id:'emerie',
+    name:'Emerie',
+    role:'Illyrian Shopkeeper', aff:'Illyrian Steppes',
+    desc:'A sharp, resilient Illyrian female running a shop in a camp that clipped her wings and counted her worthless — with a warrior’s heart the mountains never managed to break.',
+    books:{
+      acosf:{ p:22, n:'Wing-clipped and underestimated, Emerie joins Nesta and Gwyn in training and becomes the third of the new Valkyries.', s:'She helps prove what Illyrian females can be, and finds a fierce chosen family.' },
+    }
+  },
+  {
+    id:'koschei',
+    name:'Koschei',
+    role:'Deathless Sorcerer', aff:'The Continent',
+    desc:'An ancient, deathless sorcerer bound to a lake on the continent, who traps queens and powers in his web and cannot be killed while his death is hidden away.',
+    books:{
+      acowar:{ p:4, n:'A distant name of dread, holder of Vassa’s curse.' },
+      acofas:{ p:5, n:'The deathless sorcerer’s shadow lengthens over the mortal lands.' },
+      acosf:{ p:8, n:'Koschei’s manipulations reach into Prythian, setting up the war to come.', s:'His schemes ensnare figures close to the Night Court, promising a reckoning.' },
+    }
+  },
+  {
+    id:'nuala',
+    name:'Nuala & Cerridwen',
+    role:'Half-Wraith Spies', aff:'Night Court',
+    desc:'Twin half-wraiths who serve the Night Court as cooks, handmaidens, and — when it counts — some of Azriel’s deadliest, most invisible spies.',
+    books:{
+      acomaf:{ p:8, n:'The shadow-blooded twins who quietly keep Feyre fed, dressed, and informed.' },
+      acowar:{ p:8, n:'Their spycraft and shadow-walking prove invaluable in the war.' },
+      acosf:{ p:8, n:'Steadfast presences in the House of Wind through Nesta’s hardest days.' },
+    }
+  },
+  {
+    id:'father',
+    name:'Papa Archeron',
+    role:'The Archeron Father', aff:'Human Lands',
+    desc:'The Archeron sisters’ father — a once-wealthy merchant broken by ruin and loss, who spent his daughters’ childhood adrift in grief before trying, too late, to become the man they needed.',
+    books:{
+      acotar:{ p:6, n:'The gentle, defeated father Feyre leaves behind when she is taken to Prythian.' },
+      acowar:{ p:6, n:'He rebuilds his fortune and rallies the human lands to Feyre’s cause.', s:'He is killed by the King of Hybern in the final battle, dying to protect his daughters.' },
+    }
+  },
+  {
+    id:'clare',
+    name:'Clare Beddor',
+    role:'Human Girl', aff:'Human Lands',
+    desc:'A human girl from Feyre’s village — an innocent whose kindness draws her, through no fault of her own, into the reach of forces far crueler than anything mortal.',
+    books:{
+      acotar:{ p:5, n:'The village girl whose name Feyre gives to protect the truth — with terrible consequences.', s:'Amarantha’s people seize and torture her to death, a loss that haunts Feyre.' },
+    }
+  },
+  {
+    id:'alis',
+    name:'Alis',
+    role:'Spring Court Servant', aff:'Spring Court',
+    desc:'A shrewd, kind-hearted servant of the Spring Court who looks after Feyre behind her leaf-and-vine mask, offering warnings and warmth when few others will.',
+    books:{
+      acotar:{ p:8, n:'The servant who guides and quietly protects Feyre through the dangers of the Spring Court.' },
+    }
+  },
+  {
+    id:'miryam',
+    name:'Miryam',
+    role:'Former Human Queen', aff:'Cretea',
+    desc:'A legendary human healer and freed slave who helped end the first great war — and whose forbidden love with a Seraphim prince became the stuff of Prythian legend.',
+    books:{
+      acowar:{ p:6, n:'The living legend returns from hiding with her people to aid the alliance against Hybern.' },
+    }
+  },
+  {
+    id:'drakon',
+    name:'Prince Drakon',
+    role:'Seraphim Prince', aff:'Cretea',
+    desc:'The winged Seraphim prince who defied his own people for love, commanding a fabled fleet and army thought lost to history.',
+    books:{
+      acowar:{ p:6, n:'Drakon and his hidden legions arrive as a decisive force in the war’s final hour.' },
+    }
+  },
+  {
+    id:'bryce',
+    name:'Bryce Quinlan',
+    aliases:[{t:'A Stranger From Another World'}],
+    role:'Half-Fae of Another World', aff:'Midgard',
+    desc:'A sharp-tongued, star-marked stranger who falls out of nowhere into Prythian — carrying weapons, powers, and a history that belong to no court anyone knows.',
+    books:{
+      acosf:{ p:6, n:'In the story’s final pages, a woman from another world crashes into Prythian entirely — blade drawn, and utterly unlike anything the Night Court has seen.', s:'Her arrival links Prythian to the world of Crescent City, and to a war much larger than one realm.' },
+    }
+  },
+  {
+    id:'devlon',
+    name:'Devlon',
+    role:'Illyrian Camp-Lord', aff:'Illyrian Steppes',
+    desc:'The hard-line commander of the largest Illyrian war-camp — a traditionalist who bristles at change and at any female who dares reach for a blade.',
+    books:{
+      acosf:{ p:6, n:'The stubborn camp-lord whose contempt Nesta and the Valkyries are determined to prove wrong.' },
+    }
+  },
+];
+
+/* =========================================================
+   PORTRAITS — marble-bust cameo silhouettes.
+   Drop a photo at images/<id>.jpg (or .png) and it will
+   automatically replace the silhouette for that character.
+   ========================================================= */
+function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;'); }
+
+const MARBLE = `<linearGradient id="marble" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#f2ece1"/><stop offset="62%" stop-color="#ded5c4"/><stop offset="100%" stop-color="#bdb3a0"/>
+  </linearGradient>
+  <linearGradient id="gilt" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#dcc491"/><stop offset="100%" stop-color="#b3945e"/>
+  </linearGradient>
+  <radialGradient id="plinth" cx="50%" cy="32%" r="80%">
+    <stop offset="0%" stop-color="#242b26"/><stop offset="100%" stop-color="#0c0f0d"/>
+  </radialGradient>`;
+
+const HAIR_SIL = {
+  long:  '<path d="M48 12 Q20 14 18 46 Q17 76 22 104 Q31 95 40 97 L38 62 Q33 58 33 46 Q33 28 48 22 Q59 18 63 26 Q64 16 48 12 Z"/>',
+  wavy:  '<path d="M48 12 Q20 14 18 46 Q17 64 21 82 Q30 74 38 77 L37 60 Q33 56 33 46 Q33 28 48 22 Q59 18 63 26 Q64 16 48 12 Z"/>',
+  short: '<path d="M46 12 Q23 16 23 42 Q27 25 46 22 Q59 18 63 27 Q64 15 46 12 Z"/>',
+  shaved:'',
+  braid: '<path d="M46 12 Q23 16 23 42 Q27 25 46 22 Q59 18 63 27 Q64 15 46 12 Z"/><path d="M27 48 Q20 76 25 106 L35 106 Q30 76 37 52 Z"/>',
+  braids:'<path d="M46 12 Q23 16 23 42 Q27 25 46 22 Q59 18 63 27 Q64 15 46 12 Z"/><path d="M26 46 Q20 70 24 94 L32 94 Q28 70 34 50 Z"/><path d="M36 52 Q32 74 35 98 L43 98 Q40 74 44 56 Z"/>',
+  bun:   '<path d="M46 12 Q23 16 23 42 Q27 25 46 22 Q59 18 63 27 Q64 15 46 12 Z"/><circle cx="21" cy="36" r="9"/>',
+  bob:   '<path d="M48 12 Q20 14 19 44 Q18 56 22 66 Q31 59 39 62 L37 58 Q33 54 33 46 Q33 28 48 22 Q59 18 63 26 Q64 16 48 12 Z"/>'
+};
+
+function bustAccessory(acc){
+  if (acc === 'crown')
+    return '<path d="M32 13 L36 3 L42 10 L47 1 L52 9 L58 3 L61 14 Q46 9 32 13 Z" fill="url(#gilt)"/>';
+  if (acc === 'circlet')
+    return '<path d="M27 26 Q45 15 63 28" fill="none" stroke="url(#gilt)" stroke-width="1.7"/>';
+  return '';
+}
+
+function humanBust(av){
+  const hair = HAIR_SIL[av.hs] !== undefined ? HAIR_SIL[av.hs] : HAIR_SIL.short;
+  return `<svg viewBox="0 0 100 120" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img">
+  <defs>${MARBLE}</defs>
+  <rect width="100" height="120" fill="url(#plinth)"/>
+  <g fill="url(#marble)">
+    <path d="M46 16 Q62 15 65 30 Q65.5 34 63 36.5 Q61.5 38.5 63.5 40.5 L69.5 48 Q71.5 50.5 68.5 51.5 L65.5 52.3 Q64.2 55 66.2 57 Q67.5 59.5 63.8 60.8 Q61 61.8 62.8 64.5 Q64.5 67.5 60 70.5 Q54 75 48 74 Q28 72 26 50 Q24.5 24 46 16 Z"/>
+    <path d="M40 68 L40 92 Q22 97 16 120 L86 120 Q80 99 60 93 L60 66 Q52 75 40 68 Z"/>
+    ${hair}
+  </g>
+  ${bustAccessory(av.acc)}
+</svg>`;
+}
+
+function wyvernBust(){
+  return `<svg viewBox="0 0 100 120" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img">
+  <defs>${MARBLE}</defs>
+  <rect width="100" height="120" fill="url(#plinth)"/>
+  <g fill="url(#marble)">
+    <path d="M12 62 Q16 52 27 54 L31 42 L36 52 Q46 56 50 68 L46 74 Q40 66 32 66 Q18 68 12 62 Z"/>
+    <path d="M44 70 L58 22 L66 28 L60 70 Z"/>
+    <path d="M58 44 L74 30 L78 38 L64 52 Z"/>
+    <path d="M42 72 Q58 66 72 76 Q88 86 94 104 Q78 96 64 96 Q48 98 38 92 Z"/>
+    <path d="M36 90 Q30 104 34 120 L48 120 Q44 104 48 94 Z"/>
+    <path d="M66 96 Q64 108 68 120 L80 120 Q76 106 80 98 Z"/>
+  </g>
+</svg>`;
+}
+
+function dogBust(){
+  return `<svg viewBox="0 0 100 120" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img">
+  <defs>${MARBLE}</defs>
+  <rect width="100" height="120" fill="url(#plinth)"/>
+  <g fill="url(#marble)">
+    <path d="M34 46 Q32 26 44 22 Q56 18 64 26 Q74 24 78 32 Q72 34 70 40 Q74 50 68 60 Q58 68 46 64 Q34 60 34 46 Z"/>
+    <path d="M40 24 Q30 14 24 22 Q22 34 32 42 Q34 30 40 24 Z"/>
+    <path d="M66 26 Q76 18 82 26 Q82 38 72 42 Q72 32 66 26 Z"/>
+    <path d="M18 120 Q22 84 50 80 Q78 84 82 120 Z"/>
+    <path d="M44 60 L44 84 L58 84 L58 60 Z"/>
+  </g>
+</svg>`;
+}
+
+function avatarSVG(ch){
+  if (ch.av.kind === 'wyvern') return wyvernBust();
+  if (ch.av.kind === 'dog') return dogBust();
+  return humanBust(ch.av);
+}
+
+/* Colored monogram fallback for characters without a portrait. */
+const MONO_PALETTE = [
+  ['#3a4a8c','#0c1030'], ['#5a4a9e','#140f2e'], ['#2f6a7a','#08202a'],
+  ['#7a5a9e','#1a1030'], ['#8a6a3a','#241705'], ['#4a5a9e','#101430'],
+  ['#6a3a6a','#1a0c1e'], ['#3a6a8c','#0a1a28'], ['#9e7a4a','#241a08'],
+  ['#4a4a7c','#101028'], ['#5a7a9e','#0c1a28'], ['#7a5a4a','#1e1208'],
+];
+function initialsFor(name){
+  const skip = new Set(['the','of','and','a']);
+  const words = String(name).split(/\s+/).filter(w => w && !skip.has(w.toLowerCase()));
+  if (!words.length) return String(name).slice(0,1).toUpperCase();
+  if (words.length === 1) return words[0].slice(0,1).toUpperCase();
+  return (words[0][0] + words[words.length-1][0]).toUpperCase();
+}
+function monoColor(id){
+  let h = 0;
+  for (let i=0;i<id.length;i++) h = (h*31 + id.charCodeAt(i)) >>> 0;
+  return MONO_PALETTE[h % MONO_PALETTE.length];
+}
+function monogramSVG(ch){
+  const [c1,c2] = monoColor(ch.id);
+  const gid = 'mono-'+ch.id;
+  const ini = esc(initialsFor(nameFor(ch)));
+  const fs = ini.length > 1 ? 32 : 44;
+  return `<svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img">
+  <defs><radialGradient id="${gid}" cx="50%" cy="36%" r="75%">
+    <stop offset="0%" stop-color="${c1}"/><stop offset="100%" stop-color="${c2}"/>
+  </radialGradient></defs>
+  <rect width="100" height="100" fill="url(#${gid})"/>
+  <text x="50" y="52" text-anchor="middle" dominant-baseline="middle"
+    font-family="'Cinzel',Georgia,serif" font-weight="600"
+    font-size="${fs}" letter-spacing="1" fill="#f4ecd6" fill-opacity="0.95">${ini}</text>
+</svg>`;
+}
+
+/* Built-in character portraits (embedded so the file is fully self-contained). */
+const EMBEDDED = {};
+
+function portraitHTML(ch){
+  if (customURLs.has(ch.id)) {
+    return `<span class="pic-wrap"><span class="pic"><img class="custom" src="${customURLs.get(ch.id)}" alt=""></span></span>`;
+  }
+  if (EMBEDDED[ch.id]) {
+    return `<span class="pic-wrap"><span class="pic"><img class="custom" src="${EMBEDDED[ch.id]}" alt=""></span></span>`;
+  }
+  return `<span class="pic-wrap"><span class="pic">${monogramSVG(ch)}<img src="images/${ch.id}.jpg" alt="" onload="this.style.opacity=1" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='images/${ch.id}.png';}else{this.remove();}"></span></span>`;
+}
+
+/* ---------- Custom portrait uploads (saved in this browser via IndexedDB) ---------- */
+const customURLs = new Map();
+
+const PDB = {
+  db: null,
+  open(){
+    return new Promise((res, rej)=>{
+      if (this.db) return res(this.db);
+      const r = indexedDB.open('acotar-guide', 1);
+      r.onupgradeneeded = ()=> r.result.createObjectStore('portraits');
+      r.onsuccess = ()=>{ this.db = r.result; res(this.db); };
+      r.onerror = ()=> rej(r.error);
+    });
+  },
+  async set(id, blob){
+    const db = await this.open();
+    return new Promise((res, rej)=>{
+      const t = db.transaction('portraits','readwrite').objectStore('portraits').put(blob, id);
+      t.onsuccess = ()=> res(); t.onerror = ()=> rej(t.error);
+    });
+  },
+  async del(id){
+    const db = await this.open();
+    return new Promise((res, rej)=>{
+      const t = db.transaction('portraits','readwrite').objectStore('portraits').delete(id);
+      t.onsuccess = ()=> res(); t.onerror = ()=> rej(t.error);
+    });
+  },
+  async entries(){
+    const db = await this.open();
+    const store = db.transaction('portraits').objectStore('portraits');
+    const wait = r => new Promise((res, rej)=>{ r.onsuccess = ()=> res(r.result); r.onerror = ()=> rej(r.error); });
+    const [keys, vals] = await Promise.all([wait(store.getAllKeys()), wait(store.getAll())]);
+    return keys.map((k, i)=> [k, vals[i]]);
+  }
+};
+
+async function loadCustomPortraits(){
+  try {
+    const entries = await PDB.entries();
+    for (const [id, blob] of entries) customURLs.set(id, URL.createObjectURL(blob));
+    if (entries.length) render();
+  } catch(e) { /* IndexedDB unavailable — silhouettes still work */ }
+}
+
+function shrinkImage(file){
+  return new Promise((res, rej)=>{
+    const url = URL.createObjectURL(file);
+    const img = new Image();
+    img.onload = ()=>{
+      const max = 640;
+      const scale = Math.min(1, max / Math.max(img.width, img.height));
+      const c = document.createElement('canvas');
+      c.width = Math.round(img.width * scale);
+      c.height = Math.round(img.height * scale);
+      c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+      URL.revokeObjectURL(url);
+      c.toBlob(b => b ? res(b) : rej(new Error('could not process image')), 'image/jpeg', .87);
+    };
+    img.onerror = ()=>{ URL.revokeObjectURL(url); rej(new Error('not a readable image file')); };
+    img.src = url;
+  });
+}
+
+async function setCustomPortrait(ch, file){
+  const blob = await shrinkImage(file);
+  await PDB.set(ch.id, blob);
+  const old = customURLs.get(ch.id);
+  if (old) URL.revokeObjectURL(old);
+  customURLs.set(ch.id, URL.createObjectURL(blob));
+}
+
+async function removeCustomPortrait(ch){
+  await PDB.del(ch.id);
+  const old = customURLs.get(ch.id);
+  if (old) URL.revokeObjectURL(old);
+  customURLs.delete(ch.id);
+}
+
+/* =========================================================
+   STATE + RENDERING
+   ========================================================= */
+const state = { progress: 0, query: '', shield: true };
+
+function nameFor(ch){
+  if (ch.reveal && state.progress >= IDX[ch.reveal.from]) return ch.reveal.name;
+  return ch.name;
+}
+function roleFor(ch){
+  if (ch.roleReveal && state.progress >= IDX[ch.roleReveal.from]) return ch.roleReveal.role;
+  return ch.role;
+}
+function visibleAliases(ch){
+  return (ch.aliases||[]).filter(a => !a.from || state.progress >= IDX[a.from]).map(a=>a.t);
+}
+function searchHaystack(ch){
+  return [nameFor(ch), ch.reveal ? '' : ch.name, roleFor(ch), ch.aff, ...visibleAliases(ch)]
+    .join(' ').toLowerCase();
+}
+function firstBookIdx(ch){
+  return Math.min(...Object.keys(ch.books).map(b=>IDX[b]));
+}
+function highlight(text, q){
+  if (!q) return esc(text);
+  const i = text.toLowerCase().indexOf(q);
+  if (i < 0) return esc(text);
+  return esc(text.slice(0,i)) + '<mark>' + esc(text.slice(i, i+q.length)) + '</mark>' + esc(text.slice(i+q.length));
+}
+
+function buildProgressOptions(){
+  const sel = document.getElementById('progress');
+  BOOKS.forEach((b,i)=>{
+    const o = document.createElement('option');
+    o.value = i;
+    o.textContent = `${b.num} ${b.title}`;
+    sel.appendChild(o);
+  });
+  sel.value = state.progress;
+}
+
+function render(){
+  const main = document.getElementById('main');
+  main.innerHTML = '';
+  const q = state.query;
+  let anyShown = false;
+
+  BOOKS.forEach((book, bi)=>{
+    if (bi !== state.progress) return;
+
+    const chars = CHARACTERS
+      .filter(ch => ch.books[book.id])
+      .filter(ch => firstBookIdx(ch) <= state.progress)
+      .filter(ch => !q || searchHaystack(ch).includes(q))
+      .sort((a,b)=> b.books[book.id].p - a.books[book.id].p);
+
+    if (!chars.length) return;
+    anyShown = true;
+
+    const sec = document.createElement('section');
+    sec.className = 'book';
+    sec.innerHTML = `
+      <div class="book-head">
+        <span class="book-idx">/${String(bi).padStart(2,'0')}</span>
+        <h2>${esc(book.title)}</h2>
+        <span class="year">${book.num} — ${book.year}</span>
+      </div>
+      <p class="book-blurb">${esc(book.blurb)}</p>
+      <div class="grid"></div>`;
+    const grid = sec.querySelector('.grid');
+
+    chars.forEach((ch, i)=>{
+      const card = document.createElement('article');
+      card.className = 'card';
+      card.dataset.char = ch.id;
+      card.innerHTML = `
+        <div class="idx">/${String(i+1).padStart(2,'0')}</div>
+        ${portraitHTML(ch)}
+        <h3>${highlight(nameFor(ch), q)}</h3>
+        <div class="role">${esc(roleFor(ch))}</div>`;
+      card.addEventListener('click', ()=> openModal(ch));
+      grid.appendChild(card);
+    });
+    main.appendChild(sec);
+  });
+
+  document.getElementById('empty').style.display = anyShown ? 'none' : 'block';
+}
+
+/* ---------- Modal ---------- */
+function spoilerSpan(text){
+  return `<span class="spoiler" title="Click to reveal">${esc(text)}</span>`;
+}
+function openModal(ch){
+  const mc = document.getElementById('modal-content');
+  const aliases = visibleAliases(ch);
+  let descHTML = esc(ch.desc);
+  if (ch.descSpoiler && state.progress >= IDX[ch.descSpoiler.from]) {
+    descHTML += ' ' + spoilerSpan(ch.descSpoiler.text);
+  }
+
+  const rows = BOOKS
+    .map((b,bi)=>({b,bi,entry:ch.books[b.id]}))
+    .filter(r => r.entry && r.bi <= state.progress)
+    .map(r=>{
+      let note = esc(r.entry.n);
+      if (r.entry.s) note += ' ' + spoilerSpan(r.entry.s);
+      return `<div class="app-row">
+        <div class="app-book">${r.b.num} · ${esc(r.b.title)}</div>
+        <div class="app-note">${note}</div>
+      </div>`;
+    }).join('');
+
+  const hiddenCount = Object.keys(ch.books).filter(id => IDX[id] > state.progress).length;
+
+  mc.innerHTML = `
+    <div class="modal-head">
+      ${portraitHTML(ch)}
+      <div>
+        <h2>${esc(nameFor(ch))}</h2>
+        ${aliases.length ? `<div class="aka">also known as: ${esc(aliases.join(' · '))}</div>` : ''}
+        <div class="aff">${esc(roleFor(ch))} — ${esc(ch.aff)}</div>
+        <div class="portrait-actions">
+          <button class="pbtn" data-act="upload">${customURLs.has(ch.id) ? 'Replace portrait' : 'Upload portrait'}</button>
+          ${customURLs.has(ch.id) ? '<button class="pbtn" data-act="remove">Remove portrait</button>' : ''}
+          <input type="file" accept="image/*" hidden>
+        </div>
+      </div>
+    </div>
+    <p class="desc">${descHTML}</p>
+    <h4>Their Story, Book by Book</h4>
+    <div class="h4-divider">✦</div>
+    <div class="appearance">${rows}</div>
+    ${hiddenCount ? `<div class="hidden-note">…and ${hiddenCount} more book${hiddenCount>1?'s':''} hidden by your reading progress.</div>` : ''}`;
+
+  mc.querySelectorAll('.spoiler').forEach(el=>{
+    el.addEventListener('click', e=>{ e.stopPropagation(); el.classList.add('revealed'); });
+  });
+
+  const pa = mc.querySelector('.portrait-actions');
+  const fileInput = pa.querySelector('input[type=file]');
+  pa.querySelector('[data-act="upload"]').addEventListener('click', ()=> fileInput.click());
+  const rmBtn = pa.querySelector('[data-act="remove"]');
+  if (rmBtn) rmBtn.addEventListener('click', async ()=>{
+    await removeCustomPortrait(ch);
+    render(); openModal(ch);
+  });
+  fileInput.addEventListener('change', async ()=>{
+    const f = fileInput.files[0];
+    if (!f) return;
+    try {
+      await setCustomPortrait(ch, f);
+      render(); openModal(ch);
+    } catch(e) {
+      alert('Could not use that image: ' + e.message);
+    }
+  });
+
+  document.getElementById('overlay').classList.add('open');
+}
+document.getElementById('overlay').addEventListener('click', e=>{
+  if (e.target.id === 'overlay') e.currentTarget.classList.remove('open');
+});
+document.querySelector('.modal .close').addEventListener('click', ()=>{
+  document.getElementById('overlay').classList.remove('open');
+});
+document.addEventListener('keydown', e=>{
+  if (e.key === 'Escape') document.getElementById('overlay').classList.remove('open');
+});
+
+/* ---------- Controls ---------- */
+document.getElementById('search').addEventListener('input', e=>{
+  state.query = e.target.value.trim().toLowerCase();
+  render();
+});
+document.getElementById('progress').addEventListener('change', e=>{
+  state.progress = Number(e.target.value);
+  render();
+});
+document.getElementById('shield').addEventListener('change', e=>{
+  state.shield = e.target.checked;
+  document.body.classList.toggle('shield-on', state.shield);
+});
+
+buildProgressOptions();
+render();
+loadCustomPortraits();
+
+/* ---------- Parallax backdrop ---------- */
+(function(){
+  const layers = [...document.querySelectorAll('#parallax .plx')];
+  if (!layers.length || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  function update(){
+    const y = window.scrollY;
+    layers.forEach(l => {
+      l.style.transform = `translate3d(0, ${-(y * Number(l.dataset.speed)).toFixed(1)}px, 0)`;
+    });
+  }
+  addEventListener('scroll', update, { passive: true });
+  update();
+})();
+</script>
+</body>
+</html>
