@@ -35,20 +35,21 @@ const SERIES = {tog:'Throne of Glass', cc:'Crescent City', acotar:'ACOTAR'};
 
 function openDB(name){
   return new Promise(res=>{
+    let done=false; const finish=v=>{ if(!done){done=true;res(v);} };
     const r = indexedDB.open(name);
-    r.onsuccess = ()=>res(r.result);
-    r.onerror = ()=>res(null);
-    r.onupgradeneeded = ()=>{ try{r.transaction.abort();}catch(e){} res(null); };
+    r.onsuccess = ()=>finish(r.result);
+    r.onerror = ()=>finish(null);
+    r.onupgradeneeded = ()=>finish(null);
+    setTimeout(()=>finish(null), 5000);
   });
 }
-function readAll(db){
-  return new Promise(res=>{
-    if(!db || !db.objectStoreNames.contains('portraits')) return res([]);
-    const store = db.transaction('portraits').objectStore('portraits');
-    const kk = store.getAllKeys(), vv = store.getAll();
-    vv.onsuccess = ()=>{ kk.onsuccess = ()=>res(kk.result.map((k,i)=>[k,vv.result[i]])); };
-    vv.onerror = ()=>res([]);
-  });
+function reqP(r){ return new Promise((res,rej)=>{ r.onsuccess=()=>res(r.result); r.onerror=()=>rej(r.error); }); }
+async function readAll(db){
+  if(!db || !db.objectStoreNames.contains('portraits')) return [];
+  const store = db.transaction('portraits').objectStore('portraits');
+  const kReq = store.getAllKeys(), vReq = store.getAll();
+  const [keys, vals] = await Promise.all([reqP(kReq), reqP(vReq)]);
+  return keys.map((k,i)=>[k, vals[i]]);
 }
 function blobToDataURL(b){ return new Promise(res=>{ const fr=new FileReader(); fr.onload=()=>res(fr.result); fr.readAsDataURL(b); }); }
 
